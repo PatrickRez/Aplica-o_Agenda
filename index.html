@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="icon">
+                <ion-icon name="keypad-outline"></ion-icon>
+            </span>
+            <h1> Meus Contatos.</h1>
+        </header>
+
+        <form id="form-atividade">
+            <input type="text" id="Nome-contato" required aria-placeholder="Nome do contato">
+            <input type="tel" id="Numero-contato" required aria-placeholder="Numero do contato">
+            <button type="submit"> Novo Contato</button>
+        </form>
+
+        <table cellspacing = "0">
+            <thead>
+                <th>
+                    Nome do Contato
+                </th>
+                <th>Numero do contao</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Patrick</td>
+                    <td >95373028</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
