@@ -1,41 +1,44 @@
-const form = document.getElementById("form-atividade");
-const contato = [];
+const form = document.getElementById("formAtividade");
 
-let linha = "";
+let linha = " ";
+const nomeContato = [];
+const numeroContato = [];
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    adicionaLinha();
+    adicionaLinhas();
     atualizaTabela();
 });
 
 function atualizaTabela() {
-    const inputNovoName = document.getElementById('Nome-contato');
-    const inputNovoNumber = document.getElementById('Numero-contato');
+    const inputNovoName = document.getElementById('NomeContato');
+    const inputNovoNumber = document.getElementById('NumeroContato');
     
-    if (name.includes(inputNovoName.value)) {
-        alert(`Este numero ja foi inserido ${inputNovoName} já foi inserida!`.innerHTML)
+    if (nomeContato.includes(inputNovoName.value)) {
+        alert(`Este contato ja foi inserido ${inputNovoName.value} já foi inserida!`)
+
+        
     } else {
         contato.push(inputNovoName.value);
+        
         
         let linha = '<tr>';
         linha += `<td>${inputNovoName.value} </td> `;
         linha += `<td>${inputNovoNumber.value}</td>`;
         linha += '</tr>';
 
-        linha += linha;
+        linhas += linha;
 
-        const corpoTabela = document.querySelector('tbody');
-        corpoTabela.innerHTML = linha;
+        function atualizaTabela() {
+
+            const corpoTabela = document.querySelector('tbody');
+        
+            corpoTabela.innerHTML = linhas;
+        }
     }
-
-    inputNovoName.value = '';
-    inputNovoNumber.value = '';
+    function adicionaLinha() {
+        nomeContato.push(inputNovoName.value);
+        numeroContato.push(parseInt(inputNovoNumber.value));
+    }
 }
-function adicionaLinha() {
-    
-}
-
-
-
